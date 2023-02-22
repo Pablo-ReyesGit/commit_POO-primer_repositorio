@@ -1,12 +1,12 @@
 #include<iostream>
 using namespace std;
-class persona{
+class personas{
 	protected:	string nombres, apellidos, direccion, fecha_nacimiento;
 				int telefono;
 	protected:
-		persona(){
+		personas(){
 		}
-		persona(string nom, string ape, string dic, string fn, int tel){
+		personas(string nom, string ape, string dic, string fn, int tel){
 			nombres = nom;
 			apellidos = ape;
 			direccion = dic;

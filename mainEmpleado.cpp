@@ -1,14 +1,12 @@
 #include <iostream>
-#include "clientes.cpp"
+#include "Empleados.cpp"
 
 using namespace std;
 int main()
 {
-	string nit, nombres, apellidos, direccion, fecha_nacimiento;
+	string nombres, apellidos, direccion, fecha_nacimiento, co_empleado, puesto;
 	int telefono;
 	
-	cout<<"ingresar nit"<<endl;
-	cin>>nit;
 	cout<<"ingresar nombres"<<endl;
 	cin>>nombres;
 	cout<<"ingresar apellidos"<<endl;
@@ -19,15 +17,17 @@ int main()
 	cin>>fecha_nacimiento;
 	cout<<"ingresar telefono"<<endl;
 	cin>>telefono;
+	cout<<"ingresar el codigo del empleado"<<endl;
+	cin>>co_empleado;
+	cout<<"ingresar el puesto"<<endl;
+	cin>>puesto;
 	
-	cliente obj = cliente(nombres, apellidos, direccion, fecha_nacimiento, telefono, nit);
+	empleado
+	obj = empleado(nombres, apellidos, direccion, fecha_nacimiento, telefono,co_empleado, puesto);
 	obj.mostrar();
 	
 	cout<<"zona de modificacion"<<endl;
-	cout<<"ingrese el Nit : "<<endl;
-	cin>>nit;
-	obj.setNit(nit);
-	cout<<"ingrese el nombres : "<<endl;
+	cout<<"ingrese el nombre"<<endl;
 	cin>>nombres;
 	obj.setNnombres(nombres);
 	cout<<"ingrese el apellidos : "<<endl;
@@ -42,8 +42,13 @@ int main()
 	cout<<"ingrese el telefono : "<<endl;
 	cin>>telefono;
 	obj.setTelefono(telefono);
+	cout<<"ingrese el codigo del empleado : "<<endl;
+	cin>>co_empleado;
+	obj.setCodigoEmpleado(co_empleado);
+	cout<<"ingrese el puesto : "<<endl;
+	cin>>puesto;
+	obj.setPuesto(puesto);
 	
-	cout<<obj.getNit();
 	obj.mostrar();	
 
 }
